@@ -1,0 +1,31 @@
+[project]
+name = "ki-tech-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "kiortir", email = "kiortir@yandex.ru" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "aiogram>=3.20.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.11.3",
+    "pydantic-settings>=2.8.1",
+    "ujson>=5.10.0",
+]
+
+[project.scripts]
+ki-tech-bot = "ki_tech_bot:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "ruff>=0.11.5",
+]
